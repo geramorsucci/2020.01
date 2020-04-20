@@ -1,7 +1,0 @@
-1. cd /"nombredecarpeta"/2020.01/   		#Vamos al directorio.
-2. git status					#Verifica cambios en archivos.
-3. git add .					#Actualiza los cambios.
-4. git config --global user.name "username"	#Agrega tu usuario de github.
-5. git config --global user.email "email"	#Agrega tu email de github.
-6. git commit -m "nombredelrepositorio"		#Crea un nuevo commit.
-7. git push					#Sube el commit a Github.
