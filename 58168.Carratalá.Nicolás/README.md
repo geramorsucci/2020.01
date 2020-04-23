@@ -1,9 +1,9 @@
-Docker um computacion project
+Docker um computación 🛰
 ---------------------
 
-**Este proyecto esta en etapa de desarrollo**
+**Este proyecto está en etapa de desarrollo**
 
-Este proyecto surgio mientras se tomaba una clase de clases.
+Este proyecto surgió mientras se tomaba una clase de clases.
 
 Como levantar el proyecto :
 ---------------------
@@ -11,13 +11,13 @@ Como levantar el proyecto :
 ## 1º Construir el proyecto
 
 ```bash
-sudo docker build -t test-computacion .
+sudo docker build -t test-computación .
 ```
 
 ## 2º Correr el proyecto
 
 ```bash
-sudo docker run test-computacion
+sudo docker run test-computación
 ```
 
 ## Resultado esperado
