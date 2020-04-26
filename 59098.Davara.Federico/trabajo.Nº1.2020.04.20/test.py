@@ -17,6 +17,5 @@ class BubbleSortTest(unittest.TestCase):
         bubble3 = sort().BubbleSort(array3)
         self.assertEqual(array3, bubble3)
 
-
 if __name__ == "__main__":
     unittest.main()
