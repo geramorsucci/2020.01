@@ -2,13 +2,13 @@
 class Person:
     # declaramos el metodo __init__ 
     def __init__(self, name, age):
-        self.name=name
-        self.age=age
+        self.name = name
+        self.age = age
  
     #Devuelve una lista con el nombre y la edad
     #return ["Claudio", 32]
     def get_person(self):
-       return [self.name, self.age]
+        return [self.name, self.age]
  
  
 # declaramos la clase Employee
@@ -34,3 +34,4 @@ class Employee(Person):
             return "Paga impuestos"
         else:
             return "No paga impuestos"
+ 
