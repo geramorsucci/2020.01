@@ -21,6 +21,7 @@ class Employee(Person):
         #ingresamos salary para employee
         self.salary=salary 
 
+
     #Devuelve una lista con los atributos
     #return ["Claudio", 32, 30000]
     def get_employee(self):
@@ -34,3 +35,4 @@ class Employee(Person):
             return "Paga impuestos"
         else:
             return "No paga impuestos"
+ 
