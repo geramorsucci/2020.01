@@ -21,3 +21,6 @@ class Empleado (Person):
             return "Paga impuestos"
         else:
             return "No paga impuestos"
+
+"""
+prueba
