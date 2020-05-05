@@ -26,8 +26,8 @@ class Employee(Person):
     #Devuelve una lista con los atributos
     #return ["Claudio", 32, 30000]
     def get_employee(self):
-        
-       return [self.name, self.age, self.apellido, self.telefono, self.salary]
+        Employee = {'name':self.name, 'age':self.age, 'apellido':self.apellido, 'telefono':self.telefono, 'salary':self.salary}
+        return Employee
 
     # declaramos el metodo pagar_impuestos
     # comprobara si el empleado debe pagar o no
@@ -42,5 +42,10 @@ class Employee(Person):
         p = Person("Marcelino", 25 , "Caballero", 498284154678)   
         persondic = p.get_person
         print(p.get_person())
+        #muestra los atributos de persona a traves del diccionario
     
-       
+        e = Employee("Marcelino", 25 , "Caballero", 498284154678, 50000)
+        employeedic = e.get_employee
+        print(e.get_employee())
+        #muestra los atributos de persona a traves del diccionario
+    
