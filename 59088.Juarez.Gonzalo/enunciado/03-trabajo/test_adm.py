@@ -1,6 +1,6 @@
 import unittest
 from administration import Administration
-from employee import Employee, Person
+from employee import Employee
 from parameterized import parameterized, param
 
 
@@ -14,8 +14,8 @@ class TestAdm(unittest.TestCase):
     # (parameterize.expand crea cuantas copias de la función sean necesarias para los distintos parámetros)
 
     def tearDown(self):
-         self.adm = None
-    
+        self.adm = None
+
     @parameterized.expand([
         param([
             Employee("Gonzalo", 19, "Juarez", 666, 20000).get_employee(),
