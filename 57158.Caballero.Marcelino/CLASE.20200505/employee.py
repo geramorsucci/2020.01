@@ -47,5 +47,5 @@ class Employee(Person):
         e = Employee("Marcelino", 25 , "Caballero", 498284154678, 50000)
         employeedic = e.get_employee
         print(e.get_employee())
-        #muestra los atributos de persona a traves del diccionario
+        #muestra los atributos de empleado a traves del diccionario
     
