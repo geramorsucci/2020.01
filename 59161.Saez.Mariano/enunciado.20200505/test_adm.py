@@ -8,7 +8,8 @@ class TestAdminitration(unittest.TestCase):
     @parameterized.expand([
         ('Mariano', 'Saez', 20, 2995922296, 30000, 0),
         ('Agustin', 'Prieto', 20, 261756890, 29999, 1),
-        ('Matias', 'Robbio', 19, 2613424565, 90000, 2)
+        ('Matias', 'Robbio', 19, 2613424565, 90000, 2),
+        ('Bruno', 'Bonil', 19, 261890098, 100000, 3)
         ])
     def test_add_employee(self, name, surname, age, phone, salary, legajo):
         # Creamos una instancia de employee llamada empleado
