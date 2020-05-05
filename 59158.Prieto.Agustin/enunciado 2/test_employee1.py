@@ -6,7 +6,7 @@ from parameterized import parameterized
 class TestEmployee(unittest.TestCase):
     @parameterized.expand([
         ('Agustin', 'Prieto', 19, 1234, 40000, 
-        {'name': 'Agustin', 'surname': 'Prieto', 'cellphone': 1234, 'age': 19, 'salary': 40000})
+        {'name': 'Agustin', 'surname': 'Prieto', 'age': 19, 'cellphone': 1234, 'salary': 40000})
 
     ])
     def test_get_employee(self, name, surname, age, cellphone, salary, result):
