@@ -1,11 +1,19 @@
 class Administration:
-    listEmployee = {}
+    _listEmployee = {}
+
+    @property
+    def listemployee(self):
+        return self._listEmployee
+
+    @listemployee.setter
+    def listEmployee(self, obj):
+        self._listEmployee = obj
 
     # Agrega employee en listEmployee incrementando el legajo (key)
     # employee {'name':"Claudio",'surname':"Pico",'age':30,'phone':155858585}
     def add_employee(self, employee):
         legajo = len(self.listEmployee)
-        self.listEmployee[legajo] = employee
+        self._listEmployee[legajo] = employee
         return
 
 

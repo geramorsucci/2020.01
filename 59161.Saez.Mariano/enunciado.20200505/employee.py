@@ -24,6 +24,16 @@ class Employee(Person):
         # ingresamos salary para employee
         self.salary = salary
 
+    # Hace la funcion de getter
+    @property
+    def name(self):
+        return self._name
+
+    # Hace la funcion de setter
+    @name.setter
+    def name(self, value):
+        self._name = value
+
     # Devuelve una lista con los atributos
     # return ["Claudio", 32, 30000]
     def get_employee(self):
