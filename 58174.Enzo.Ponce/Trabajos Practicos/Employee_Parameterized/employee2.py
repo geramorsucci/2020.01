@@ -28,7 +28,7 @@ class Employee(Person):
     #Devuelve una lista con los atributos
     #return ["Claudio", 32, 30000]
     def get_employee(self):
-       return self.__dict__
+            return self.__dict__
 
     # declaramos el metodo pagar_impuestos
     # comprobara si el empleado debe pagar o no

@@ -1,5 +1,6 @@
 import unittest
 from employee2 import Person, Employee
+
 from parameterized import parameterized
 
 
@@ -33,5 +34,6 @@ class Test_employee(unittest.TestCase):
         cobro = impuestos.pay_tax()
         self.assertEqual(cobro,("No paga impuestos"))
 
+    
 if __name__=="__main__":
     unittest.main()
