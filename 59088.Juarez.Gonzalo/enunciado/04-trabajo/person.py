@@ -1,10 +1,23 @@
-
 class Person:
 
-    def __init__(self, name, surname, age):
+    def __init__(self, name="", surname="", age=0):
         self.name = name
         self.surname = surname
         self.age = age
+
+    @property
+    def id(self):
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        try:
+            if id is None:
+                raise ValueError("Los campos no pueden tener valores nulos.")
+            else:
+                self._id = int(id)
+        except ValueError as err:
+            print("Error: " + str(err))
 
     @property
     def name(self):
@@ -47,3 +60,8 @@ class Person:
                 self._age = int(age)
         except ValueError as err:
             print("Error: " + str(err))
+
+    def set_campos(self):
+        self.name = input("Ingresar nombre: ")
+        self.surname = input("Ingresar apellido: ")
+        self.age = input("Ingresar edad ")

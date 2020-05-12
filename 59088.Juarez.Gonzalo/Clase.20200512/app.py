@@ -24,21 +24,21 @@ class App():
             res = int(input("Elegir una acción: "))
             if res == 1:
                 app.peli_service.listar_peliculas()
-            if res == 2:
+            elif res == 2:
                 app.peli_service.agregar_pelicula()
-            if res == 3:
+            elif res == 3:
                 titulo = input("    Ingresar titulo de la película que " +
                                "se desea modificar: ")
                 app.peli_service.modificar_pelicula(hash(titulo))
-            if res == 4:
+            elif res == 4:
                 titulo = input("    Ingresar titulo de la película que " +
                                "se desea eliminar: ")
                 app.peli_service.eliminar_pelicula(hash(titulo))
-            if res == 5:
+            elif res == 5:
                 app.peli_service.agregar_al_cast(self.actor_service)
-            if res == 6:
+            elif res == 6:
                 app.peli_service.remover_del_cast(self.actor_service)
-            if res == 7:
+            elif res == 7:
                 app.peli_service.listar_cast()
             else:
                 return False
@@ -57,13 +57,13 @@ class App():
             res = int(input("Elegir una acción: "))
             if res == 1:
                 app.actor_service.listar_actores()
-            if res == 2:
+            elif res == 2:
                 app.actor_service.agregar_actor()
-            if res == 3:
+            elif res == 3:
                 nombre = input("    Ingresar nombre del actor que " +
                                "se desea modificar: ")
                 app.actor_service.modificar_actor(hash(nombre))
-            if res == 4:
+            elif res == 4:
                 nombre = input("    Ingresar nombre del actor que " +
                                "se desea eliminar: ")
                 app.actor_service.eliminar_actor(hash(nombre))

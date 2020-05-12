@@ -1,29 +1,36 @@
-from repository import Repository
-# from person import Person
+from person import Person
 
 
 class PersonService:
+    def __init__(self, repository):
+        self.repository = repository
 
-    def get_personList(self):
-        return Repository.person
+    def find_many(self):
+        return self.repository.persons
 
-    def find_by_name(self, name):
-        name = name.upper()
-        for i in self.get_personList():
-            if self.get_personList()[i].name == name:
-                return self.get_personList()[i]
-        return False
+    def find_one(self, id):
+        try:
+            person = self.repository.persons[id]
+            return person
+        except KeyError:
+            print("La persona no se encuentra en el repositorio. " +
+                  "Probar de nuevo.")
+            return False
 
     # Agrega una persona en el dicionario person, definido en Repository
-    def add_person(self, person):
-        Repository.person[len(Repository.person)] = person
+    def add_one(self, person):
+        if person is None:
+            person = Person()
+            person.set_campos()
+        person.id = len(self.repository.persons)
+        self.repository.persons[person.id] = person
 
     # Actualiza datos de una person del diccionario person
     # key clave diccionario
     # object Person
-    def update_person(self, key, person):
-        Repository.person[key] = person
+    def update_one(self, id):
+        self.find_one(id).set_campos()
 
     # Elimina persona segun key del dic person
-    def delete_person(self, key):
-        del Repository.person[key]
+    def delete_one(self, key):
+        del self.repository.persons[key]
