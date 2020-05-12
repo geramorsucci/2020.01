@@ -1,36 +1,32 @@
 # declaramos la clase persona
 class Person:
     # declaramos el metodo __init__ 
-    def __init__(self, name, age, surname, phone):
-        self.name = name
-        self.age = age
-        self.surname = surname
-        self.phone = phone
-
- 
+    def __init__(self, name, surname, age, phone):
+        self.name=name
+        self.surname=surname 
+        self.age=age
+        self.phone=phone
     #Devuelve una lista con el nombre y la edad
     #return ["Claudio", 32]
     def get_person(self):
-        person = {'name':self.name,'age':self.age, 'surname':self.surname, 'phone':self.phone}
+        person = {'name':self.name,'surname':self.surname,'age':self.age, 'phone':self.phone}
         return person
-        # return self.__dict__      crea el diccionario automaticamente
  
-
+ 
 # declaramos la clase Employee
 # la clase empleado hereda los atributos y metodos de la clase Persona
 class Employee(Person):
     # declaramos el metodo __init__ para Employee
-    def __init__(self, name, age, surname, phone, salary):
+    def __init__(self,name, surname, age, phone, salary):
         # llamamos al metodo init de la clase padre
-        Person.__init__(self, name, age, surname, phone)
+        Person.__init__(self, name, surname, age, phone)
         #ingresamos salary para employee
         self.salary=salary 
 
     #Devuelve una lista con los atributos
     #return ["Claudio", 32, 30000]
     def get_employee(self):
-        person = {'name':self.name,'age':self.age, 'surname':self.surname, 'phone':self.phone, 'salary':30000}
-        return person
+       return [self.name, self.age, self.salary]
 
     # declaramos el metodo pagar_impuestos
     # comprobara si el empleado debe pagar o no
@@ -40,11 +36,3 @@ class Employee(Person):
             return "Paga impuestos"
         else:
             return "No paga impuestos"
- 
-
-if __name__ == "__main__":
-     p = Person("Juan",23,"Ricci",2610000000)
-     personDic = p.get_person()
-     print(p.get_person())
-     print(personDic["name"])
-
