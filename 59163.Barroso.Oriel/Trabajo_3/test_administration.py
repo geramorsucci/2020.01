@@ -3,7 +3,7 @@ from unittest import TestCase
 from administration import Administration
 from class1 import Person, Employee
 from parameterized import parameterized
-TestCase.maxDiff = None
+
 class testAdministration (unittest.TestCase):
     @parameterized.expand([
                            {"name":"Oriel", "surname": "Barroso", "age":23, "phone":155, "salary":25000, "legajo":0},
@@ -17,7 +17,6 @@ class testAdministration (unittest.TestCase):
         adm.add_employee(emp)
         adm.add_employee(emp2)
         self.assertTrue(adm.listEmployee)
-
 
 if __name__ == "__main__":
     unittest.main()
