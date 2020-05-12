@@ -23,3 +23,15 @@ class Empleado (Person):
             return "Paga impuestos"
         else:
             return "No paga impuestos"
+
+class Administracion(Empleado):
+    diccionarioEmployee = {}
+    def __init__(self, nombre, apellido, edad, mail, salario):
+        Person.__init__(self, nombre, apellido, edad, mail)
+        self.salario = salario
+
+    def add_employee(self):
+        emple = {"nombre":self.nombre, "apellido":self.apellido, "edad":self.edad, "mail":self.mail, "salario": self.salario}
+        legajo=len(self.diccionarioEmployee)
+        self.diccionarioEmployee[legajo] = emple
+        return self.diccionarioEmployee
