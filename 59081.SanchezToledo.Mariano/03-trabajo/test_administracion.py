@@ -1,22 +1,29 @@
 import unittest
-from parameterized import parameterized
+from parameterized import parameterized, param
 from employee import Employee
 from administration import Administration
 
-class TestAdmin (unittest.TestCase):
+class Test_Legajo (unittest.TestCase):
     @parameterized.expand([
-        {
-    0: {'name': 'Claudio', 'surname': 'Pico', 'age': 30, 'phone': 155858585,'salary':30000}, 
-    1: {'name': 'NIcolas', 'surname': 'Pico', 'age': 30, 'phone': 155858585,'salary':20000}
-    }
+        param([
 
+        {0:{'name': 'Claudio', 'surname': 'Pico', 'age': 30, 'phone': 155858585,'salary':30000}},
+        {1:{'name': 'Gabriel', 'surname': 'Sosa', 'age': 22, 'phone': 153242445,'salary':20000}},
+        {2:{'name': 'Mariano', 'surname': 'Sanchez Toledo','age': 20,'phone':153334355,'salary':40000}}
+
+        ])
     ])
+    
+    def testing_legajo (self, employee):
+        for n in range (len(employee)):
+            Administration().add_employee(employee[n])
+        
+        NumLeg = [*Administration().listEmployee.keys()]
+        NumLegRange = [n for n in range (len(NumLeg))]
 
-    def test_add_employee(self, name, surname, age, phone, salary, legajo, result):
-        employee = Employee(name, surname, age, phone, salary)
-        employeelist = Administration().add_employee(employee)
-        self.assertEqual(employee, result)
+        self.assertEqual(NumLeg, NumLegRange)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
+        
