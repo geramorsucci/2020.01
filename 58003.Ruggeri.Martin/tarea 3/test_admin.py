@@ -1,5 +1,5 @@
 import unittest
-from persona import Person, Employee
+from employee import Person, Employee
 from admin import Administration
 from parameterized import parameterized
 
@@ -37,4 +37,3 @@ class TestEmployee(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
