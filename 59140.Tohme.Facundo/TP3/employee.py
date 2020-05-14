@@ -27,7 +27,7 @@ class Employee(Person):
     # Devuelve una lista con los atributos
     # return ["Claudio", 32, 30000]
     def get_employee(self):
-       return['name': self.name, 'age': self.age, 'salary': self.salary, 'legajo': self.legajo]
+       return ['name': self.name, 'age': self.age, 'salary': self.salary, 'legajo': self.legajo]
 
     # declaramos el metodo pagar_impuestos
     # comprobara si el empleado debe pagar o no
