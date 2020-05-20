@@ -29,6 +29,9 @@ class Administracion(Empleado):
     def __init__(self, nombre, apellido, edad, mail, salario):
         Person.__init__(self, nombre, apellido, edad, mail)
         self.salario = salario
+        
+    def crearDiccionario(self):
+        return self.__dict__
 
     def add_employee(self):
         emple = {"nombre":self.nombre, "apellido":self.apellido, "edad":self.edad, "mail":self.mail, "salario": self.salario}

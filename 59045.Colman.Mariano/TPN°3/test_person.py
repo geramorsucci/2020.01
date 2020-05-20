@@ -41,15 +41,16 @@ class TestNoPagaImpuesto(unittest.TestCase):
 
 class TestAdministracion(unittest.TestCase):
     @parameterized.expand([
-        ("Mariano", "Colman", 21, 2614312380, 3500, 0, {'nombre':"Mariano",'apellido':"Colman",'edad':21,'mail':2614312380, "salario":3500}),
-        ("Octavio", "Colman", 24, 2614312381, 2500, 1, {'nombre':"Octavio",'apellido':"Colman",'edad':24,'mail':2614312381, "salario":2500}),
-        ("Jose", "Colman", 20, 2614312382, 1500, 2, {'nombre':"Jose",'apellido':"Colman",'edad':20,'mail':2614312382, "salario":1500})
+        ("Mariano", "Colman", 21, 2614312380, 3500, 0),
+        ("Octavio", "Colman", 24, 2614312381, 2500, 1),
+        ("Jose", "Colman", 20, 2614312382, 1500, 2)
     ])
 
-    def test_add_employee(self, nombre, apellido, edad, mail, salario, legajo, resultado):
+    def test_add_employee(self, nombre, apellido, edad, mail, salario, legajo):
         admin = Administracion(nombre, apellido, edad, mail, salario)
+        empleado = admin.crearDiccionario()
         dicAdmin = admin.add_employee()
-        self.assertEqual(dicAdmin[legajo], resultado)
+        self.assertEqual(dicAdmin[legajo], empleado)
 
 
 if __name__ == "__main__":
