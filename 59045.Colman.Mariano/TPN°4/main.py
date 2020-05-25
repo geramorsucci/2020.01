@@ -1,10 +1,10 @@
-from person import Person
 from personService import PersonService
-from repository import Repository
+
 
 class Menu():
     def __init__(self):
         pass
+
     def menuPersona(self):
         print("\n  Menu de persona")
         print("\n--> 1 - Listar personas")
@@ -13,7 +13,8 @@ class Menu():
         print("--> 4 - Eliminar persona")
         print("--> 5 - Finalizar")
         return int(input("\n Ingrese un numero para seleccionar una opcion: "))
-    
+
+
 if __name__ == '__main__':
     menu = Menu()
     bucle = True
@@ -37,5 +38,3 @@ if __name__ == '__main__':
             servicePersona = None
         if opcion == 5:
             bucle = False
-
-

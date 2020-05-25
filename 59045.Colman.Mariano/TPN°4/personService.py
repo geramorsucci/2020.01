@@ -1,6 +1,7 @@
 from repository import Repository
 from person import Person
 
+
 class PersonService:
     def __init__(self):
         pass
@@ -14,10 +15,9 @@ class PersonService:
         persona = Person()
         persona.agregarPersona()
         key = persona.key
-        per = {"Nombre":persona.name.upper(), "Apellido":persona.surname.upper(), "Edad":persona.age}
+        per = {"Nombre": persona.name.upper(), "Apellido": persona.surname.upper(), "Edad": persona.age}
         Repository.person[key] = per
 
-    
     def update_person(self):
         print("\n Update persona")
         persona = Person()
@@ -30,11 +30,12 @@ class PersonService:
         respuesta = str(input("\nEsta seguro que quiere modificar esta persona? (S/N): "))
         if respuesta.upper() == "S":
             persona.updatearPersona(True)
-            per = {"Nombre":persona.name.upper(), "Apellido":persona.surname.upper(), "Edad":persona.age}
+            per = {"Nombre": persona.name.upper(), "Apellido": persona.surname.upper(), "Edad": persona.age}
             Repository.person[clave] = per
         elif respuesta.upper() == "N":
             pass
-   
+
+    # Elimina persona segun key del dic person
     def delete_person(self):
         print("\n Eliminar persona")
         persona = Person()
