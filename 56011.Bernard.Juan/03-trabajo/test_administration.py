@@ -13,9 +13,9 @@ class TestAdministration(unittest.TestCase):
     def test_add_employee(self, name, surname, age, phone, salary, legajo):
         employee = Employee(name, surname, age, phone, salary)
         adm = Administration()
-        adm.add_employee(employee.get_employee())
-        key = len(adm.listEmployee) - 1
-        self.assertEqual(key, legajo)
+        dictEmployee = employee.get_employee()
+        adm.add_employee(dictEmployee)
+        self.assertDictEqual(adm.listEmployee[legajo], dictEmployee)
 
 
 if __name__ == '__main__':
