@@ -1,3 +1,3 @@
 class PeliculaRepository():
-    def __init__(self, pelicula=None):
-        self.pelicula = pelicula
+    def __init__(self, peliculas=None):
+        self.peliculas = peliculas
