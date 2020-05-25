@@ -20,7 +20,7 @@ class TestAdminitration(unittest.TestCase):
         # Dado que conocemos el legajo que se asignara a empleado podemos
         # comparar si el elemento almacenado en
         # la key = legajo es igual a empleado (deberia ser el mismo)
-        self.assertEqual(adm.listEmployee[legajo], empleado)
+        self.assertEqual(adm.listemployee[legajo], empleado)
 
 
 if __name__ == '__main__':
