@@ -19,19 +19,21 @@ if __name__ == '__main__':
     p1.age = '33'
     personService.add_person(p1)
 
-    #Agregamos al hermano **********************
-    #
-    #
-
+    #Agregamos al hermano
+    p2 = p1
+    p2.name = 'nicolas'
+    p2.age = 30
+    personService.add_person(p2)
+    
     print (personService.get_personList()) # {0: {'_name': 'FEDERICO', '_surname': 'GONZALEZ', '_age': '20'}, 1: {'_name': 'NICOLAS', '_surname': 'PICO', '_age': 30}, 2: {'_name': 'NICOLAS', '_surname': 'PICO', '_age': 30}}
 
-    #Update fEDERICO
-    #
-    #
+    #Update person
+    p2.age = 41
+    personService.update_person(1, p2)
+    
     print (personService.get_personList()) 
     
 
     #delte person
     personService.delete_person(2)
-    
     print (personService.get_personList()) #{0: {'_name': 'FEDERICO', '_surname': 'GONZALEZ', '_age': '20'}, 1: {'_name': 'NICOLAS', '_surname': 'NICOLAS', '_age': 41}}

@@ -2,23 +2,22 @@ from repository import Repository
 from person import Person
 class PersonService:
 
-    def get_personList(self,):
+    def get_personList(self):
         return Repository.person
 
-    #Agrega una persona en el dicionario person, definido en Repository
     def add_person(self, person):
-
+        lastKey = -1
+        for key in Repository.person:
+            lastKey = key
+        lastKey = lastKey + 1
+        Repository.person [lastKey] = person.__dict__
     
-    
-    #Actualiza datos de una person del diccionario person
-    #key clave diccionario 
-    #object Person
-    def update_person(self ,key , person):
+    def update_person(self ,key , person): 
+        Repository.person[key]['_name'] = person.name
+        Repository.person[key]['_surname'] = person.surname
+        Repository.person[key]['_age']= person.age
 
-   
-   
-    #Elimina persona segun key del dic person
     def delete_person(self ,key):
-
+        del Repository.person[key]
        
 
