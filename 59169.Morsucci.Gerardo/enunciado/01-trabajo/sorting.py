@@ -1,6 +1,3 @@
-lista = [36, 71, 16, 21, 73, 9, 0, 40, 66, 7]
-
-
 class Sort():
     def BubbleSort(self, lista):
         n = len(lista)
